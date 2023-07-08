@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <main>
+        <section class="cart">
+            <h2>Items</h2>
+            <div id="alerts"></div>
+            <div id="loading" class="spinner-container ms-div-center">
+              <div class="spinner"></div>
+            </div>
+            <subsection class="cart-item">
+                <div id="content" class="hide">
+                    <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" 
+        alt="vegan-pizza" class="cart-item">
+                    <ul>
+                        <li class="item-name">Vegan Neapolitan Pizza</li>
+                        <li class="item-number">00000001</li>
+                        <li class="item-price">$9.25</li>
+                    </ul>
+                </div>
+            </subsection>
+        </section>
+        <div class="box">
+        <form class="checkout-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <h2>Checkout Info</h2>
+            <div class="form-info">
+                <label for="first-name" class="form-label">First Name:</label>
+                <input type="text" id="first-name" class="form-input" name="first_name" value="Carmen" required>
+            </div>
+            <div class="form-info">
+                <label for="last-name" class="form-label">Last Name:</label>
+                <input type="text" class="form-input" name="last_name" value="Sandiego" required>
+            </div>
+            <div class="form-info">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-input" name="email" value="carmen.sandiego@broderbund.com" required>
+            </div>
+            <div class="form-info">
+                <label for="phone" class="form-label">Phone Number:</label>
+                <input type="tel" class="form-input" name="phone" value="123456789" required>
+            </div>
+            <div class="form-info">
+                <label for="address-line-1" class="form-label">Address Line 1:</label>
+                <input type="text" class="form-input" name="address1" value="500 Redwood Blvd" required>
+            </div>
+            <div class="form-info">
+                <label for="address-line-2" class="form-label">Address Line 2:</label>
+                <input type="text" class="form-input" name="address2">
+            </div>
+            <div class="form-info">
+                <label for="state" class="form-label">State/Province:</label>
+                <input type="text" class="form-input" name="state" value="California" required>
+            </div>
+            <div class="form-info">
+                <label for="postal-code" class="form-label">Zip/Postal Code:</label>
+                <input type="text" class="form-input" name="zip" value="94947" required>
+            </div>
+            <div class="form-info">
+                <label for="country" class="form-label">Country:</label>
+                <input type="text" class="form-input" name="country" value="United States" required>
+            </div>
+            <div id="payment_options"></div>
+        </form>
+        <div>
+    </main>
+  </body>
+</html>
